@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Planets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <h1 class="page-header__heading">The Planets</h1>
+      <nav class="page-header__nav">
+        <input class="ham-menu-check js-ham-check" onclick="hamMenuClicked()" type="checkbox">
+        <div class="hamburger-nav">
+          <div class="hamburger-nav__line hamburger-nav--rotate-45"></div>
+          <div class="hamburger-nav__line hamburger-nav--rotate-neg45"></div>
+        </div>
+        <div class="page-header__nav__link-container">
+          <button class="page-header__nav__link" href="/mercury">mercury</button>
+          <a class="page-header__nav__link" href="/venus">venus</a>
+          <a class="page-header__nav__link" href="/earth">earth</a>
+          <a class="page-header__nav__link" href="/mars">mars</a>
+          <a class="page-header__nav__link" href="/jupiter">jupiter</a>
+          <a class="page-header__nav__link" href="/saturn">saturn</a>
+          <a class="page-header__nav__link" href="/uranus">uranus</a>
+          <a class="page-header__nav__link" href="/neptune">neptune</a>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <nav class="sub-nav sm-hide">
+        <button class="sub-nav__link" onclick="subNavSelection('surface')">surface</button> 
+        <button class="sub-nav__link" onclick="subNavSelection('structure')">structure</button>
+        <button class="sub-nav__link" onclick="subNavSelection('overview')">overview</button> 
+      </nav>
+      <section class="planet-details">
+        <img class="planet-details__planet-img" src="img/earth.png">
+        <div class="flex-wrap-horz">
+        <section class="planet-details__summary">
+          <h1 class="planet-details__heading">earth</h1>
+          <p class="planet-details__content">
+            Earth is the third planet from the Sun and the only astronomical object known to harbor and support life. About 29.2% of Earth's surface is land consisting of continents and islands. The remaining 70.8% is covered with water, mostly by oceans, seas, gulfs, and other salt-water bodies, but also by lakes, rivers, and other freshwater, which together constitute the hydrosphere.
+          </p>
+          <div class="planet-details__wikiref">
+            <label class="planet-details__wikiref__label">Source:</label>
+            <a class="planet-details__wikiref__link" target="_blank" href="https://en.wikipedia.org/wiki/Earth">wikipedia</a>
+            <img class="planet-planet-details__wikiref__icon" src="img/extlink.svg">
+          </div>
+        </section>
+        <nav class="sub-nav xl-hide">
+          <button class="sub-nav__link" onclick="subNavSelection('01 overview')">01 overview</button> 
+          <button class="sub-nav__link" onclick="subNavSelection('02 internal structure')">02 internal structure</button>
+          <button class="sub-nav__link" onclick="subNavSelection('03 surface geology')">03 surface geology</button> 
+        </nav>
+      </div>  
+      </section>
+      <section class="short-info">
+        <div class="short-info__block">
+          <p class="short-info__block__header">rotation time</p>
+          <p class="short-info__block__value">0.99 days</p>
+        </div>
+        <div class="short-info__block">
+          <p class="short-info__block__header">revolution time</p>
+          <p class="short-info__block__value">365.26 days</p>
+        </div>
+        <div class="short-info__block">
+          <p class="short-info__block__header">radius</p>
+          <p class="short-info__block__value">6,371 km</p>
+        </div>
+        <div class="short-info__block">
+          <p class="short-info__block__header">average temp.</p>
+          <p class="short-info__block__value">16&deg;C</p>
+        </div>
+      </section>
+    </main>
+    <i class="far fa-times-circle"></i>
+  </body>
+  </html>
+</html>
